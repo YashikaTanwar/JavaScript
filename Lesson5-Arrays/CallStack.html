@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Function</title>
+</head>
+
+<body>
+    <h2>Javascript Function</h2>
+    <p>Do calculation and display the result</p>
+    <p id="demo">
+        <script>
+            function add(a, b) {
+                return a + b;
+            }
+            function average(a, b) {
+                return (a + b) / 2;
+            }
+            var result = average(10, 20);
+            var result1 = add(10, 20);
+            document.getElementById("demo").innerHTML = "Average is " + result + " and Sumation is " + result1;
+        </script>
+    </p>
+</body>
+
+</html>

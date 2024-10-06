@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #paragraph {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Syntax - Text generator</title>
+
+</head>
+
+<body>
+    <div class="bg-dark text-white" style="font-size: 30px; text-align: center;">
+        JavaScript Text Generator - Version 2.0
+    </div>
+    <button id="showButton" class="bg-primary">Show</button>
+    <p id="paragraph">Hello World!</p>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var a = document.getElementById("showButton");
+            var b = document.getElementById("paragraph");
+            a.addEventListener("click", function () {
+                if (b.style.display === "none") {
+                    b.style.display = "block";
+                    a.textContent = "Hide";
+                } else {
+                    b.style.display = "none";
+                    a.textContent = "Show";
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

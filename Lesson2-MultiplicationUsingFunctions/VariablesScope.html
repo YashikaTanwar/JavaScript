@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope of Variables</title>
+</head>
+
+<body>
+    <p>A function can access variables defined inside the function.</p>
+    <button type="button" onclick="myfunction()">Click me!</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        var b = 5;//global variable
+        function myfunction() {
+            var a = 4;// local variable
+            document.getElementById("demo").innerHTML = "Result of b * a: " + (b * a);
+        }
+
+        document.getElementById("demo1").innerHTML = "Value of a: " + a;
+
+    </script>
+</body>
+
+</html>

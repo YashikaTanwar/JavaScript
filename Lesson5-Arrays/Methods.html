@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods</title>
+    <style>
+        body {
+            background-color: pink;
+            font-size: 20px;
+            color: purple;
+        }
+
+        p::before {
+            content: '';
+            display: inline-block;
+            background: url('fruit.png');
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        p {
+            font-weight: bold;
+            color: brown;
+        }
+
+        p:hover {
+            color: green;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Javascript Array Methods</h2>
+    <h2>join() and pop()</h2>
+    <p>The join() methods join array elements into a string</p>
+    <p>The pop() method removes the last element from an array</p>
+    <p id="myapp"></p>
+    <p id="myfirstapp"></p>
+    <p id="mysecondapp"></p>
+    <script>
+        var fruits = ["Apple ", "Mango ", "Banana ", "Orange "]
+        document.getElementById("myapp").innerHTML = fruits.join("Pear ");
+        document.getElementById("myfirstapp").innerHTML = fruits;
+        fruits.pop();
+        document.getElementById("mysecondapp").innerHTML = fruits;
+    </script>
+</body>
+
+</html>

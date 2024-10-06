@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 20px;
+        }
+
+        p {
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Javascript Arrays</h2>
+    <hr>
+    <p id="demo">
+        <script>
+            var cars = ["volvo - Volvo Car AB, trading as Volvo Cars is a Swedish multinational manufacturer of luxury vehicles.",
+
+                "volkswagen - Volkswagen is a German automobile manufacturer based in Wolfsburg, Lower Saxony, Germany.",
+
+                "Tata - Tata Motors, a USD 44 billion organisation, is a leading global automobile manufacturer of cars ",
+
+                "Mahindra - Mahindra & Mahindra is an Indian automobile manufacturing company headquartered in Mumbai, Maharashtra."]
+
+            var displayCars = cars.map(function (car) {
+                return '🏎️💨 ' + car;
+            });
+
+            document.getElementById("demo").innerHTML = displayCars[2] + "<br>" + displayCars[3]
+        </script>
+    </p>
+</body>
+
+</html>
+
+
+<!-- map() method to create a new array where each element from the original cars array is prefixed with the car emoji (🏎️💨) -->

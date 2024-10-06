@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Finding The Largest number with negotiations</p>
+    <p id="result"></p>
+    <script>
+        function FindMax() {
+            var i;
+            var max = 0;
+            for (i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+                return max;
+            }
+        }
+        document.getElementById('result').innerHTML = FindMax(34, 77, 52, 67, 89, 95, 75, 24)
+
+    </script>
+
+</body>
+
+</html>

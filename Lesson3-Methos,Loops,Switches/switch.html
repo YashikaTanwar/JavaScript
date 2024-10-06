@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="todaydate"></p>
+    <script>
+        var day;
+        switch (new Date().getDay()) {
+            // Date().getDay() -> returns a number from 0(sunday) to 6(saturday)
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+        }
+        var date = new Date().getDate();
+        var month = new Date().getMonth() + 1;
+        var year = new Date().getFullYear();
+        document.getElementById("demo").innerHTML = "Today is: " + day
+        var currentDate = `${date} - ${month} - ${year}`
+        document.getElementById("todaydate").innerHTML = "Today is: " + currentDate
+    </script>
+</body>
+
+</html>
