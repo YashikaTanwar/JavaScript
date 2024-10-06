@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            padding: 25px;
+            width: 300px;
+        }
+
+        button {
+            display: block;
+            margin-left: 100px;
+            margin-top: 20px;
+            padding: 5px 10px;
+            font-weight: bold;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        input {
+            margin: 10px 0px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Real Time Form Validation</h1>
+    <hr>
+    <div class="container">
+        <form action="">
+            <label for="">Email:</label>
+            <input type="email" id="email"><br>
+            <label for="">Password:</label>
+            <input type="password" id="password"><br>
+            <label for="">Age:</label>
+            <input type="number" id="age"><br>
+            <label for="">Message:</label>
+            <p id="msgbox"></p> <!-- Updated to <p> for better message display -->
+            <button type="button" onclick="validate(event)">Login</button>
+        </form>
+    </div>
+</body>
+
+<script>
+    function validate(e) {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const pass = document.getElementById("password").value;
+        const age = document.getElementById("age").value;
+        const msg = document.getElementById("msgbox");
+        let message = "";
+
+        if (email === "") {
+            message = "Enter an email";
+            msg.style.color = "red";
+        }
+        else if (pass === "") {
+            message = "Enter a password";
+            msg.style.color = "red";
+        }
+        else if (age === "") {
+            message = "Enter age";
+            msg.style.color = "red";
+        }
+        else {
+            message = "Login Successful";
+            msg.style.color = "green";
+        }
+
+        msg.innerHTML = message;
+    }
+</script>
+
+</html>
